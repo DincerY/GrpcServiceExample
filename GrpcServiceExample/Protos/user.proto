@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+option csharp_namespace = "UserGrpc";
+
+package user;
+
+service UserOperation{
+	rpc UserCreate (UserCreateRequest) returns (UserCreateResponse) {}
+	rpc UserGreet (UserCreateRequest) returns (UserGreetResponse) {}
+
+}
+
+message UserCreateRequest{
+	int32 id = 1;
+	string name = 2;
+	string surname = 3;
+}
+
+message UserCreateResponse{
+	int32 id = 1;
+	string name = 2;
+	string surname = 3;
+}
+
+message UserGreetRequest{
+	string name = 1;
+	string surname = 2;
+}
+
+message UserGreetResponse{
+	string message = 1;
+}

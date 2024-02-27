@@ -10,6 +10,8 @@ var name = Console.ReadLine();
 Console.WriteLine("Soy adınızı giriniz : ");
 var surname = Console.ReadLine();
 
+
+
 var reply = await client.SayHelloAsync(
     new HelloRequest { Name = name , Surname = surname});
 Console.WriteLine("Greeting: " + reply.Message);
